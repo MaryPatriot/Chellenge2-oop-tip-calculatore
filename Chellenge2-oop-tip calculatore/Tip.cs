@@ -10,8 +10,8 @@ namespace Chellenge2_oop_tip_calculatore
     {
         
         private int[] _bill;
-        private double [] _totalbill;
-        private double [] _tips;
+        private double [] _totalbill= new double[5];
+        private double [] _tips= new double[5];
 
         public int[] Bill { get => _bill; set => _bill = value; }
         public double[] Totalbill1 { get => _totalbill; set => _totalbill = value; }
@@ -20,18 +20,14 @@ namespace Chellenge2_oop_tip_calculatore
         public Tip(int bill1, int bill2, int bill3, int bill4, int bill5)
         {
             int[] temp = {  bill1,  bill2,  bill3, bill4,  bill5 };
-            Bill[5]  = temp[5];
+            Bill= temp;
         }
 
     
 
         public  void Totalbill()
         {
-            double[] Totalbill1 = new double[5];
-
-            double[] Tips = new double[5];
-
-
+          
             for (int i = 0; i < 5; i++)
             {
                 if (Bill[i] < 50)
